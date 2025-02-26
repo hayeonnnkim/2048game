@@ -19,7 +19,7 @@ const Tile = ({ value }) => {
   return <div css={tileStyle(value)}>{value || ""}</div>;
 };
 
-// PropTypes 추가
+
 Tile.propTypes = {
   value: PropTypes.number,
 };

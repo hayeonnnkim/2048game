@@ -1,39 +1,45 @@
 /** @jsxImportSource @emotion/react */
-
 import styled from "./style";
 import PropTypes from "prop-types";
-import ScoreBoard from "../ScoreBoard";
-import Button from "../Button";
-// import { toUnitless } from "@mui/material/styles/cssUtils"; 확인
 
-
-
-const Header = ({ onReset }) => {
+const Header = ({ score, bestScore, resetGame }) => {
   return (
     <div css={styled.headerContainer}>
-      <div css={styled.topContainer}>
-        <h1 css={styled.toUnitles}>2048</h1>
-        <div css={styled.rightContainer}>
-          <ScoreBoard />
+      {/* 2048 + ScoreBoard */}
+      <div css={styled.topRow}>
+        <div css={styled.gametitle}>2048</div>
+        <div css={styled.scoreBoardContainer}>
+          <div css={styled.scoreBox}>
+            <div className="label">SCORE</div>
+            <div className="value">{score}</div>
+          </div>
+          <div css={styled.scoreBox}>
+            <div className="label">BEST</div>
+            <div className="value">{bestScore}</div>
+          </div>
         </div>
       </div>
 
-      
-      <div css={styled.infoContainer}>
-        <div>
+      {/* 설명 + New Game 버튼 */}
+      <div css={styled.gameInfoRow}>
+        <div css={styled.gameDescriptionContainer}>
           <div css={styled.description}>Play 2048 Game Online</div>
-          <div css={styled.subDescription}>
-            Join the numbers and get to the <b>2048 tile!</b>
+          <div css={styled.subdescription}>
+            Join the numbers and get to the <strong>2048 tile!</strong>
           </div>
         </div>
-        <Button onClick={onReset}>New Game</Button>
+        <button onClick={resetGame} css={styled.newGameButton}>
+          New Game
+        </button>
       </div>
     </div>
   );
 };
 
 Header.propTypes = {
-  onReset: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
+  bestScore: PropTypes.number.isRequired,
+  resetGame: PropTypes.func.isRequired,
 };
 
 export default Header;

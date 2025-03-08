@@ -2,15 +2,15 @@ import { css } from "@emotion/react";
 
 export default {
   title: (value) => css`
-    width: 100%;  /* ✅ 그리드 칸과 동일한 크기 유지 */
+    width: 100%; 
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 54px;  /* ✅ 128 이상일 때 폰트 키움 */
+    font-size: 54px;
     font-weight: bold;
     border-radius: 5px;
-    color: ${value >= 8 ? "white" : "#776e65"};  /* ✅ 8 이상일 때 흰색 */
+    color: ${value >= 8 ? "white" : "#776e65"};  /* 8 이상일 때 흰색 */
     background: ${(() => {
       switch (value) {
         case 2:

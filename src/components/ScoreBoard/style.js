@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export default {
   scoreBoard: css`
@@ -13,7 +13,7 @@ export default {
     border-radius: 5px;
     text-align: center;
     font-size: 16px;
-    min-width: 30px; /* 최소 너비 */
+    min-width: 20px; /* 최소 너비 */
     width: auto; /* 내용에 따라 조정 */
     color: #eee4da;
   `,

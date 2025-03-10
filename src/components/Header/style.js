@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export default {
   headerContainer: css`
@@ -83,9 +83,9 @@ export default {
     font-weight: bold;
     color: #776e65;
   `,
-  
+
   subdescription: css`
     font-size: 18px;
     color: #776e65;
-  `
+  `,
 };

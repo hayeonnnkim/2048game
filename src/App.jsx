@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Layout from "./components/Layout/Layout";
+import { useState } from 'react';
+import Layout from './components/Layout/Layout';
 
 const SIZE = 4;
 
 const App = () => {
   const [grid, setGrid] = useState(
-    Array.from({ length: SIZE }, () => Array(SIZE).fill(0))
+    Array.from({ length: SIZE }, () => Array(SIZE).fill(0)),
   );
 
   const [score, setScore] = useState(0); // ✅ 현재 점수 상태 추가

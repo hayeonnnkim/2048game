@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const globalStyles = css`
   * {
@@ -8,7 +8,7 @@ const globalStyles = css`
   }
 
   body {
-    font-family: "Arial", sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #faf8ef;
     color: #776e65;
     display: flex;

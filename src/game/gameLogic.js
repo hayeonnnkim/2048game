@@ -10,7 +10,8 @@ export const generateRandomTile = (grid) => {
 
   if (emptyTiles.length === 0) return grid;
 
-  const { row, col } = emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
+  const { row, col } =
+    emptyTiles[Math.floor(Math.random() * emptyTiles.length)];
   grid[row][col] = Math.random() < 0.9 ? 2 : 4;
   return grid;
 };
@@ -33,23 +34,33 @@ export const moveTiles = (grid, direction) => {
     return newRow;
   };
 
-  if (direction === "left") {
+  if (direction === 'left') {
     for (let row = 0; row < 4; row++) {
       newGrid[row] = combineRow(newGrid[row]);
     }
-  } else if (direction === "right") {
+  } else if (direction === 'right') {
     for (let row = 0; row < 4; row++) {
       newGrid[row] = combineRow(newGrid[row].reverse()).reverse();
     }
-  } else if (direction === "up") {
+  } else if (direction === 'up') {
     for (let col = 0; col < 4; col++) {
-      let column = [newGrid[0][col], newGrid[1][col], newGrid[2][col], newGrid[3][col]];
+      let column = [
+        newGrid[0][col],
+        newGrid[1][col],
+        newGrid[2][col],
+        newGrid[3][col],
+      ];
       column = combineRow(column);
       for (let row = 0; row < 4; row++) newGrid[row][col] = column[row];
     }
-  } else if (direction === "down") {
+  } else if (direction === 'down') {
     for (let col = 0; col < 4; col++) {
-      let column = [newGrid[0][col], newGrid[1][col], newGrid[2][col], newGrid[3][col]];
+      let column = [
+        newGrid[0][col],
+        newGrid[1][col],
+        newGrid[2][col],
+        newGrid[3][col],
+      ];
       column = combineRow(column.reverse()).reverse();
       for (let row = 0; row < 4; row++) newGrid[row][col] = column[row];
     }

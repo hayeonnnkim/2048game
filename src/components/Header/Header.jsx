@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import styled from "./style";
-import PropTypes from "prop-types";
+import styled from './style';
+import PropTypes from 'prop-types';
 
 const Header = ({ score, bestScore, resetGame }) => {
   return (

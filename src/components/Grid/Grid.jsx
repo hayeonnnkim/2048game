@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import PropTypes from "prop-types";
-import styled from "./style";
-import Title from "../Title/Title";
+import PropTypes from 'prop-types';
+import styled from './style';
+import Title from '../Title/Title';
 
 const Grid = ({ grid }) => {
   return (

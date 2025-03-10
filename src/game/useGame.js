@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react";
-import { generateRandomTile, moveTiles } from "./gameLogic";
+import { useState, useEffect } from 'react';
+import { generateRandomTile, moveTiles } from './gameLogic';
 
 export const useGame = () => {
-  const [grid, setGrid] = useState(Array(4).fill().map(() => Array(4).fill(0)));
+  const [grid, setGrid] = useState(
+    Array(4)
+      .fill()
+      .map(() => Array(4).fill(0)),
+  );
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
@@ -20,7 +24,11 @@ export const useGame = () => {
   };
 
   const resetGame = () => {
-    setGrid(Array(4).fill().map(() => Array(4).fill(0)));
+    setGrid(
+      Array(4)
+        .fill()
+        .map(() => Array(4).fill(0)),
+    );
     setScore(0);
     setGrid((prevGrid) => generateRandomTile(prevGrid));
   };
